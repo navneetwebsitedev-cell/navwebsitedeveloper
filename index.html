@@ -1702,6 +1702,228 @@
         flex-direction: column;
     }
 }
+/* HERO WEBSITE VISUAL PREVIEW */
+
+.website-preview {
+    padding: 0 !important;
+    overflow: hidden;
+    background: #ffffff !important;
+    color: #182033;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    transform: perspective(1000px) rotateY(-3deg);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.preview-topbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    background: #f2f4f8;
+    border-bottom: 1px solid #e4e7ee;
+}
+
+.preview-dots {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.preview-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.preview-dot.red {
+    background: #ff6159;
+}
+
+.preview-dot.yellow {
+    background: #ffbd2e;
+}
+
+.preview-dot.green {
+    background: #28c840;
+}
+
+.preview-url {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 10px;
+    color: #727b8e;
+}
+
+.preview-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 18px 22px;
+}
+
+.preview-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #202b48;
+}
+
+.preview-logo span {
+    color: #7357ff;
+}
+
+.preview-nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 10px;
+    color: #555e70;
+}
+
+.preview-menu-icon {
+    display: none;
+}
+
+.preview-hero {
+    padding: 30px 24px 22px;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(115, 87, 255, 0.13),
+            transparent 40%
+        ),
+        #ffffff;
+}
+
+.preview-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #7357ff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.preview-hero h2 {
+    margin: 0 0 13px;
+    color: #1b2440;
+    font-size: clamp(25px, 3vw, 35px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.preview-hero h2 span {
+    color: #7357ff;
+}
+
+.preview-hero p {
+    max-width: 260px;
+    margin: 0 0 20px;
+    color: #737b8c;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.preview-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.preview-primary-btn,
+.preview-secondary-btn {
+    display: inline-block;
+    padding: 10px 13px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.preview-primary-btn {
+    background: #7357ff;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(115, 87, 255, 0.2);
+}
+
+.preview-secondary-btn {
+    border: 1px solid #e1e4ed;
+    color: #343d52;
+}
+
+.preview-stats {
+    display: flex;
+    gap: 28px;
+    margin-top: 27px;
+    padding-top: 19px;
+    border-top: 1px solid #eceef4;
+}
+
+.preview-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.preview-stats strong {
+    color: #202943;
+    font-size: 17px;
+}
+
+.preview-stats small {
+    color: #82899a;
+    font-size: 9px;
+}
+
+.preview-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 13px 20px;
+    background: #f7f8fc;
+    color: #697287;
+    font-size: 9px;
+}
+
+@media (max-width: 650px) {
+    .website-preview {
+        width: 100%;
+        transform: none;
+    }
+
+    .preview-navbar {
+        padding: 14px 16px;
+    }
+
+    .preview-nav-links {
+        display: none;
+    }
+
+    .preview-menu-icon {
+        display: block;
+        color: #303b55;
+        font-size: 18px;
+    }
+
+    .preview-hero {
+        padding: 24px 18px 20px;
+    }
+
+    .preview-hero h2 {
+        font-size: 27px;
+    }
+
+    .preview-stats {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .preview-bottom {
+        flex-wrap: wrap;
+    }
+}
 
 
     </style>
@@ -1974,17 +2196,65 @@
                         Modern Design
                     </div>
 
-                    <div class="code-card">
+                    <div class="code-card website-preview">
 
-                        <div class="code-top">
-                            <span class="code-dot red"></span>
-                            <span class="code-dot yellow"></span>
-                            <span class="code-dot green"></span>
+    <div class="preview-topbar">
+        <div class="preview-dots">
+            <span class="preview-dot red"></span>
+            <span class="preview-dot yellow"></span>
+            <span class="preview-dot green"></span>
+        </div>
+        <span class="preview-url">yourwebsite.com</span>
+    </div>
 
-                            <span class="code-filename">
-                                website.html
-                            </span>
-                        </div>
+    <div class="preview-navbar">
+        <div class="preview-logo">N<span>.</span></div>
+
+        <div class="preview-nav-links">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+        </div>
+
+        <div class="preview-menu-icon">☰</div>
+    </div>
+
+    <div class="preview-hero">
+        <span class="preview-tag">CREATIVE DIGITAL STUDIO</span>
+
+        <h2>Build Your<br>
+            <span>Digital Future.</span>
+        </h2>
+
+        <p>Beautiful websites designed to grow your business.</p>
+
+        <div class="preview-buttons">
+            <span class="preview-primary-btn">Explore More ↗</span>
+            <span class="preview-secondary-btn">Our Work</span>
+        </div>
+
+        <div class="preview-stats">
+            <div>
+                <strong>50+</strong>
+                <small>Projects</small>
+            </div>
+            <div>
+                <strong>100%</strong>
+                <small>Passion</small>
+            </div>
+            <div>
+                <strong>24/7</strong>
+                <small>Support</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-bottom">
+        <span>✦ Modern Websites</span>
+        <span>Designed with care ↗</span>
+    </div>
+
+</div>
 
                         <div class="code-lines">
 
